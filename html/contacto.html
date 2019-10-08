@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Venta Automotriz</title>
+  <link rel="stylesheet" href="../estilos.css">
+  <link rel="shortcut icon" href="../imagen/segunda imagen.jpg">
+
+  <script type="text/javascript" src="../js/entrada.js"></script>
+  
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--Encabezado-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img class="marcaimagen" src="../imagen/marca.jpg" alt="auto">Automotores
+        Serenidad</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="vehiculos.html">Vehiculos</a></li>
+        <li><a href="tabla.html">Tabla</a></li>
+        <li class="active"><a href="contacto.html">Contactanos</a></li>
+        <li><a target="_blank"
+            href="https://www.google.com/maps/place/Universidad+Nacional+del+Centro+de+la+Provincia+de+Buenos+Aires/@-37.3288102,-59.1409615,17z/data=!4m5!3m4!1s0x95911f99e2413bdf:0x1dd3999f5502e258!8m2!3d-37.3287505!4d-59.1387299">Ubicación</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Formulario -->
+
+    <h2 class="contacto">Completa el Formulario o Llamanos al <span class="telefono"> 0800-555-AUTO (2886) </span> </h2>
+
+    <form id="contact_form" class="form padding-5" onsubmit="return checkform(this);" action="#">
+      <div class="form-row">
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+          <label class="nombre-etiqueta" for="text">Nombre</label>
+          <input class="dato-contacto" type="text" name="nombre" id="" maxlength="20" required>
+        </div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+          <label class="nombre-etiqueta" for="text">Apellido</label>
+          <input class="dato-contacto" type="text" name="nombre" id="" maxlength="20" required>
+        </div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+          <label class="nombre-etiqueta" for="email">E-mail</label>
+          <input class="dato-contacto" type="email" name="email" id="" maxlength="40" placeholder="Ej.: pedro@gmail.com" required>
+        </div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+          <label class="nombre-etiqueta" for="number">Telefono</label>
+          <input class="dato-contacto" type="number" name="telefono" id="" placeholder="ej (011) 15-0987-7372" maxlength="20" required>
+        </div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-6">
+          <label class="nombre-etiqueta" for="doc">Documento</label>
+          <select class="opciones" name="doc" id="" required>
+            <option value="">Seleccione</option>
+            <option value="doc">DNI</option>
+            <option value="doc">LC</option>
+            <option value="doc">LE</option>
+            <option value="doc">Pasaporte</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+          <label class="nombre-etiqueta" for="number">Numero</label>
+          <input class="dato-contacto" type="number" name="numero doc" id="" maxlength="10" required>
+        </div>
+        <div class="form-group col-md-6 col-xs-6 col-sm-12">
+          <label class="nombre-etiqueta" for="">Motivo</label>
+          <select class="opciones" name="motivo" required>
+            <option value="">Seleccione</option>
+            <option value="motivo">Solicitar Informacion</option>
+            <option value="motivo">Quiero Comprar</option>
+            <option value="motivo">Quejas y Sugerencias</option>
+          </select>
+        </div>
+        <div class="form-group col-md-12 col-xs-12 col-sm-12">
+          <label class="nombre-etiqueta" for="text">Mensaje</label>
+        </div>
+        <div class="form-group col-md-12 col-xs-12 col-sm-12">
+          <textarea class="texto-multilinea" type="text" name="mensaje" id="" cols="78" rows="5"></textarea>
+        </div>
+        
+        <div class="form-group col-md-12 col-xs-12 col-sm-12">  
+          <!-- Inicio CAPTCHA -->
+          
+          <div class="capbox">
+            <div id="CaptchaDiv"></div>
+            <div class="capbox-inner">
+              <label class="nombre-etiqueta col-md-12 col-xs-12 col-sm-12">Introduzca CAPTCHA:</label>
+              <input class="dato-contacto" type="hidden" id="txtCaptcha">
+              <input class="dato-contacto" type="text" name="CaptchaInput" id="CaptchaInput">
+            </div>
+          </div>         
+          <!-- Fin CAPTCHA -->
+          <script type="text/javascript" src="../js/captcha.js"></script>
+        </div>
+
+        <div class="form-group col-md-12 col-xs-12 col-sm-12">
+          <input class="button" type="reset" value="Restablecer">
+          <input class="button" type="submit" value="Enviar">
+        </div>
+
+      </div>
+    </form>
+  <!-- Fin Formulario -->
+  
+  <!-- Footer -->
+  <footer id="contact_form" class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="text-center col-md-12 col-xs-12 col-sm-12">
+          <div class="iconos">
+
+            <!-- Facebook -->
+            <a class="fb-ic" target="_blank" href="https://es-la.facebook.com/">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic" target="_blank" href="https://twitter.com/?lang=es">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" target="_blank" href="https://www.instagram.com/?hl=es-la">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 col-md-12 col-xs-12 col-sm-12">© 2019 Copyright:
+      <a href=""> Automotores SERENIDAD</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+
+</body>
+
+</html>

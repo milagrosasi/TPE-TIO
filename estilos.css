@@ -1,0 +1,246 @@
+body {
+	padding-top:70px;
+}
+
+/*Encabezado - Nav*/
+
+.marcaimagen {
+    width: 10%;
+    height: auto;
+    display: inline !important; /*al sacar important titulo e imagen no quedan alineados*/
+}
+
+@media only screen and (min-width:300px) and (max-width: 800px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none;
+    }
+    .navbar-nav {
+        float: none;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display: block;
+	}
+}
+
+
+/* Contacto - Formulario*/
+
+.contacto {
+    padding: 0% 2%;
+}
+.telefono {
+    color: blue;
+}
+
+.row::after {
+    content: "";
+    display: table;
+}
+.button {
+    height: 40px;
+    width: 100PX;
+    background-color: unset;
+}
+.padding-5 {
+    padding: 5% 5%;
+}
+.nombre-etiqueta {
+    display: inline-block;
+    min-width: 50%;
+}
+.dato-contacto {
+    border: solid 1px black;
+}
+.opciones {
+    border: solid 1px black;
+    min-width: 40%;
+}
+.texto-multilinea{
+   border: solid 1px black;
+   margin: 0% 10% 0% 0%;
+}
+
+@media only screen and (min-width:1024px) {
+   .nombre-etiqueta{
+       display: inline-block;
+       min-width: 20%;
+   }
+   .texto-multilinea{
+    min-width: 50%;
+ }
+}
+@media only screen and (max-width:767px) {
+   .opciones{
+       display: inline-block;
+       width: 100%;
+   }
+   .texto-multilinea{
+    max-width: 50%;
+ }
+}
+@media only screen and (min-width:768px) and (max-width:848px) {
+   .opciones{
+       display: inline-block;
+       width: 50%;
+   }
+   .texto-multilinea{
+    max-width: 50%;
+ }
+}
+
+
+/* Index */
+.nosotros1 {
+    display: inline-block;
+    padding: 3%;
+    text-align: justify;
+    vertical-align: text-top;
+}
+
+
+/* Tabla */
+.bt-icon{
+    text-align: center;
+}
+.bt-icon:hover {
+    color: greenyellow;
+}
+.btn-ocultar{
+    display: none;
+}
+.invalid{
+    border: solid red 1px;
+}
+.invalid::-webkit-input-placeholder {
+    color: red;
+}
+
+
+/* Vehiculo */
+.contenido {
+    text-align: center;
+}
+
+.vehiculo {
+    /* div Principal*/
+    margin: 1%;
+    width: 150px;
+    height: 270px;
+    display: inline-block;
+    border: 2px solid black;    
+}
+.vehiculo1 {
+    /* div img vehiculo venta*/
+    width: 120px;
+    height: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.venta {
+    /* imagen venta*/
+    width: 110px;
+    height: 80px;
+    display: inline-block;  
+}
+
+.preciosimbolo {
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+.precioimporte {
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.detallevehiculo1 {
+    /* centrar li dv1*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+.dv1 {
+    /* le quita biñeta li dv1*/
+    list-style: none;
+}
+[class*="dv1"] {
+    /* separa renglones info*/
+    float: left;
+    padding: 3px;
+}
+
+.masinfo {
+    list-style: none;
+    margin: 3%;
+    padding: 0;
+    color: darkgreen;
+    font-size: 18px;
+
+    /* centrar li masinfo*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.primero {
+    /* Visualizar masinfo*/
+    padding: 5px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    position: relative;
+    
+}
+.vermas{
+    /*Estilo del Boton masinfo*/
+    width: 100%;
+    color: darkgreen;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
+.oculto{
+    visibility: hidden;
+}
+
+
+/* Footer */
+.iconos, .fb-ic, .tw-ic, .ins-ic {
+    padding: 1%;
+}
+footer {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.footerVehiculos {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}

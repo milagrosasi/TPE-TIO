@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Venta Automotriz</title>
+    <link rel="stylesheet" type="text/css" href="../estilos.css">
+    <link rel="shortcut icon" href="../imagen/segunda imagen.jpg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <!--Encabezado-->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img class="marcaimagen" src="../imagen/marca.jpg" alt="auto">Automotores Serenidad</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="vehiculos.html">Vehiculos</a></li>
+        <li class="active"><a href="tabla.html">Tabla</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
+        <li><a target="_blank" href="https://www.google.com/maps/place/Universidad+Nacional+del+Centro+de+la+Provincia+de+Buenos+Aires/@-37.3288102,-59.1409615,17z/data=!4m5!3m4!1s0x95911f99e2413bdf:0x1dd3999f5502e258!8m2!3d-37.3287505!4d-59.1387299">Ubicación</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <!--Cuerpo-->
+  <div class="contenido" >
+
+      <label class="col-md-2 col-sm-2 col-xs-3" for="buscar">Buscar:</label>
+    <input class="col-md-2 col-sm-2 col-xs-3" type="text" id="filtro" onkeyup="Filtrar()" placeholder="Filtra por Modelo...">
+
+    <table class="table table-striped" id="tabla">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marca</th>
+          <th scope="col">Modelo</th>
+          <th scope="col">Combustible</th>
+          <th scope="col">Color</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+
+    </table>  
+    
+        
+    <div id="content">
+      <button id="btn-guardar" class="btn-ocultar">Guardar</button>
+      <button id="bt-add" class="btn btn-default">Agregar</button>
+      <button id="bt-add3" class="btn btn-default">Agregar3</button>
+      <button id="bt-cancelar" class="btn btn-default">Cancelar</button>
+    </div>
+
+    <div class="container" id="datosAuto">
+      <div class="row justify-content-md-center col-12">
+        <label class="col-md-2 col-sm-2 col-xs-4" for="marca">Marca:</label>
+        <input class="col-md-4 col-sm-4 col-xs-4" type="text" id="idmarca" name="marca">
+        <div id="marcaValid"></div>
+      </div>
+      <div class="row justify-content-md-center col-12">
+        <label class="col-md-2 col-sm-2 col-xs-4" for="modelo">Modelo:</label>
+        <input class="col-md-4 col-sm-4 col-xs-4" type="text" id="idmodelo" name="modelo">
+      </div>
+      <div class="row justify-content-md-center col-12">
+        <label class="col-md-2 col-sm-2 col-xs-4" for="combustible">Combustible:</label>
+        <input class="col-md-4 col-sm-4 col-xs-4" type="text" id="idcombustible" name="combustible">
+      </div>
+      <div class="row justify-content-md-center col-12">
+        <label class="col-md-2 col-sm-2 col-xs-4" for="color">Color:</label>
+        <input class="col-md-4 col-sm-4 col-xs-4" type="text" id="idcolor" name="color">
+      </div>
+      <div class="row justify-content-md-center col-12">
+        <label class="col-md-2 col-sm-2 col-xs-4" for="precio">Precio:</label>
+        <input class="col-md-4 col-sm-4 col-xs-4" type="text" id="idprecio" name="precio">
+      </div>
+      <div class="row justify-content-md-center">
+          <input type="hidden" id="id" name="id">
+        </div>
+
+    </div>
+
+  </div>
+
+  
+  <!-- Footer -->
+  <footer id="contact_form" class="page-footer font-small cyan darken-3">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="text-center col-md-12 col-xs-12 col-sm-12">
+          <div class="iconos">
+
+            <!-- Facebook -->
+            <a class="fb-ic" target="_blank" href="https://es-la.facebook.com/">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic" target="_blank" href="https://twitter.com/?lang=es">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic" target="_blank" href="https://www.instagram.com/?hl=es-la">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href=""> Automotores SERENIDAD</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  
+
+  
+  <script src="../js/tabla.js"></script>
+
+</body>
+</html>
