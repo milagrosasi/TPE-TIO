@@ -128,7 +128,7 @@ body {
     text-align: center;
 }
 .bt-icon:hover {
-    color: greenyellow;
+    color:red;
 }
 .btn-ocultar{
     display: none;
